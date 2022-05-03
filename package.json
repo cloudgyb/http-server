@@ -1,0 +1,27 @@
+{
+  "name": "http-server",
+  "version": "1.0.0",
+  "description": "A simple web server build on NodeJS.",
+  "author": {
+    "name": "cloudgyb",
+    "email": "gyb_cloud@163.com",
+    "url": "https://github.com/cloudgyb"
+  },
+  "main": "app.ts",
+  "scripts": {
+    "dev": "ts-node ./src/app.ts",
+    "build": "npx tsc && node ./copy_static.js",
+    "app": "node ./dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "web server",
+    "http"
+  ],
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^17.0.23",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3"
+  }
+}
