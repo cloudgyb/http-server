@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "./app.schema.json",
+  "title": "App configuration",
+  "description": "An app config schema definition.",
+  "type": "object",
+  "properties": {
+    "profile": {
+      "description": "profile 定义",
+      "type": "object",
+      "properties": {
+        "active": {
+          "description": "激活的profile",
+          "type": "string"
+        }
+      },
+      "require": [
+        "active"
+      ]
+    },
+    "server": {
+      "description": "server 定义",
+      "type": "object",
+      "properties": {
+        "host": {
+          "description": "监听的host或ip",
+          "type": "string"
+        },
+        "port": {
+          "description": "监听的端口",
+          "type": "number",
+          "minimum": 1,
+          "maximum": 65535,
+          "default": 80
+        }
+      },
+      "require": [
+        "active"
+      ]
+    },
+    "web": {
+      "description": "web 配置",
+      "type": "object",
+      "properties": {
+        "root": {
+          "type": "string",
+          "description": "Web 部署根目录"
+        }
+      },
+      "require": [
+        "root"
+      ]
+    }
+  },
+  "required": [
+    "profile",
+    "web"
+  ]
+}

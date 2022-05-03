@@ -1,0 +1,13 @@
+{
+  "$schema": "./app.schema.json",
+  "profile": {
+    "active": "dev"
+  },
+  "web": {
+    "root": "../apps"
+  },
+  "server": {
+    "host": "localhost",
+    "port": 80
+  }
+}

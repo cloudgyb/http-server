@@ -1,0 +1,14 @@
+{
+  "web": {
+    "root": "/src/static/",
+    "static": {
+      "resource": {
+        "path": "/static/"
+      }
+    }
+  },
+  "server": {
+    "host": "192.168.30.40",
+    "port": 81
+  }
+}
